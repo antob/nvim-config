@@ -7,6 +7,9 @@ vim.g.snacks_animate = false
 -- Use the 68k asm syntax variant.
 vim.g.asmsyntax = "asm68k"
 
+-- Disable tabline
+vim.g.showtabline = 0
+
 -- Enable LSP servers
 vim.lsp.enable({
   "m68k",
