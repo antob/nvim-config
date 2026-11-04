@@ -4,6 +4,9 @@
 
 vim.g.snacks_animate = false
 
+-- Hide LSP symbol breadcrumbs (trouble.nvim) in lualine
+vim.g.trouble_lualine = false
+
 -- Use the 68k asm syntax variant.
 vim.g.asmsyntax = "asm68k"
 
