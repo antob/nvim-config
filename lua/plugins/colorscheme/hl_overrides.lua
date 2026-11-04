@@ -141,6 +141,9 @@ local get_overrides_hl = function(C)
     NoiceCmdline = { bg = C.base, fg = C.text },
     NoiceCmdlinePopupNormal = { fg = C.text, bg = floatColors.blockBorderBg },
     NoiceCmdlinePopupBorder = { fg = floatColors.blockBorderFg, bg = floatColors.blockBorderBg },
+    -- The input() prompt text is shown in the border title, which otherwise
+    -- links to the (invisible) border color.
+    NoiceCmdlinePopupTitleInput = { fg = C.blue, bg = floatColors.blockBorderBg },
     NoiceConfirm = { fg = C.text, bg = floatColors.blockBorderBg },
     NoiceConfirmBorder = { fg = floatColors.blockBorderFg, bg = floatColors.blockBorderBg },
     NoiceSplit = { link = "Normal" },
