@@ -19,6 +19,17 @@ return {
         },
         opts = { skip = true },
       })
+
+      -- Noice drops a confirm message when it's identical to the previous one,
+      -- so asking the same question twice shows only "[Y]es, (N)o, (C)ancel".
+      -- Reset its duplicate check before each confirm.
+      local Msg = require("noice.ui.msg")
+      local State = require("noice.ui.state")
+      local on_confirm = Msg.on_confirm
+      Msg.on_confirm = function(event, ...)
+        State.clear(event)
+        return on_confirm(event, ...)
+      end
     end,
   },
 }
